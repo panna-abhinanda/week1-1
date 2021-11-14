@@ -1,18 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css" class="css">
+    <link rel="stylesheet" href="all.css" class="css">
+    <title>東台灣住宿資訊站</title>
 </head>
 
 <body>
-    <h1>Hello</h1>
-    <p>Hi</p>
-    <p>more text</p>
-    <button>ABC</button>
+    <div class="wrap index-bg">
+        <h1 style="display:none" class="fs-b-title">東台灣住宿資訊站</h1>
+        <div class="search-menu">
+            <form class="search-form">
+                <select name="district" id="districtSelector" class="form-control fs-s-title">
+                    <option value="" disabled selected hidden>選擇縣市</option>
+                    <option value="hualien">花蓮</option>
+                    <option value="taitung">台東</option>
+                </select>
+                <select name="district" id="districtSelector" class="form-control fs-s-title">
+                    <select name="area" id="areaSelector" class="form-control ">
+                    <option value="" disabled selected hidden>選擇行政區域</option>
+                    <option value="hualienCity">花蓮市</option>
+                </select>
+                <input type="text" class="serach-text fs-s-title" placeholder="輸入旅館名字 ">
+                <input type="button" class="fs-s-title search-btn" value="搜尋">
+            </form>
+            <form action="" class="detail-search-form">
+                <div class="form-detial-area">
+                    <div class="form-title fs-m-title">價格區間</div>
+                    <div class="slider-range">
+                        <div class="user-slider-range" style="width:100px;left:50px;"></div>
+                        <a href="" class="slider-handle" style="left:50px"></a>
+                        <a href="" class="slider-handle" style="left:150px"></a>
+                    </div>
+                    <label for="maxPrice">上限 NT$</label><input type="number" class="serach-text price-text fs-s-title" id="maxPrice" placeholder="2000">
+                    <label for="minPrice">下限 NT$</label><input type="number" class="serach-text price-text fs-s-title" id="minPrice" placeholder="0">
+                </div>
+                <div class="form-detial-area">
+                    <div class="form-title fs-m-title">旅館名宿分類</div>
+                    <div class="tag-group">
+                        <a class="tag tag-selected" href=""><span>旅館</span></a>
+                        <a class="tag" href=""><span>民宿</span></a>
+                    </div>
+                </div>
+                <div class="form-detial-area">
+                    <div class="form-title fs-m-title">服務項目</div>
+                    <div class="tag-group">
+                        <a class="tag" href=""><span>餐廳</span></a>
+                        <a class="tag" href=""><span>會議場所</span></a>
+                        <a class="tag" href=""><span>咖啡廳</span></a>
+                        <a class="tag" href=""><span>酒吧</span></a>
+                        <a class="tag" href=""><span>宴會廳</span></a>
+                        <a class="tag" href=""><span>商店</span></a>
+                        <a class="tag" href=""><span>游泳池</span></a>
+                        <a class="tag" href=""><span>有線網路</span></a>
+                        <a class="tag tag-selected" href=""><span>無線網路</span></a>
+                        <a class="tag" href=""><span>兒童遊樂設施</span></a>
+                        <a class="tag" href=""><span>餐廳</span></a>
+                        <a class="tag" href=""><span>會議場所</span></a>
+                        <a class="tag" href=""><span>咖啡廳</span></a>
+                        <a class="tag" href=""><span>酒吧</span></a>
+                        <a class="tag" href=""><span>宴會廳</span></a>
+                        <a class="tag" href=""><span>商店</span></a>
+                        <a class="tag" href=""><span>游泳池</span></a>
+                        <a class="tag" href=""><span>有線網路</span></a>
+                        <a class="tag" href=""><span>無線網路</span></a>
+                        <a class="tag" href=""><span>兒童遊樂設施</span></a>
+                    </div>
+                </div>
+            </form>
+
+            <div class="dropdown-btn">進階搜尋</div>
+            <div class="tag-group tag-selected-group">
+                <a class="tag" href=""><span>餐廳</span></a>
+                <a class="tag" href=""><span>會議場所</span></a>
+                <a class="tag" href=""><span>餐廳</span></a>
+                <a class="tag" href=""><span>會議場所</span></a>
+            </div>
+
+        </div>
+        <div class="search-result">
+            <p class="searchResult-text">搜尋到 <span id="searchResultNum">2128</span> 項結果</p>
+            <ul class="hotelCard-area">
+                <li class="hotelCard">
+                    <div class="hotelCard-img">
+                        <img src="images/ec0d37a0a95d428406795e1fa1dd1aaa.jpg" alt="">
+                    </div>
+                    <div class="hotelCard-content">
+                        <h3 class="hotelCard-name">花蓮翰品酒店</h3>
+                        <p class="hotelCard-info">花蓮縣・花蓮市</p>
+                        <p class="hotelCard-info">9009~44814</p>
+                        <p class="hotelCard-info">有停車位</p>
+                        <p class="hotelCard-service">服務：餐廳、會議場所、咖啡廳、酒吧、宴會廳、健身房、酒店、游泳池、有線網路</p>
+                    </div>
+                </li>
+                <li class="hotelCard">
+                    <div class="hotelCard-img">
+                        <img src="images/ec0d37a0a95d428406795e1fa1dd1aaa.jpg" alt="">
+                    </div>
+                    <div class="hotelCard-content">
+                        <h3 class="hotelCard-name">花蓮翰品酒店</h3>
+                        <p class="hotelCard-info">花蓮縣・花蓮市</p>
+                        <p class="hotelCard-info">9009~44814</p>
+                        <p class="hotelCard-info">有停車位</p>
+                        <p class="hotelCard-service">服務：餐廳、會議場所、咖啡廳、酒吧、宴會廳、健身房、酒店、游泳池、有線網路</p>
+                    </div>
+                </li>
+                <li class="hotelCard">
+                    <div class="hotelCard-img">
+                        <img src="images/ec0d37a0a95d428406795e1fa1dd1aaa.jpg" alt="">
+                    </div>
+                    <div class="hotelCard-content">
+                        <h3 class="hotelCard-name">花蓮翰品酒店</h3>
+                        <p class="hotelCard-info">花蓮縣・花蓮市</p>
+                        <p class="hotelCard-info">9009~44814</p>
+                        <p class="hotelCard-info">有停車位</p>
+                        <p class="hotelCard-service">服務：餐廳、會議場所、咖啡廳、酒吧、宴會廳、健身房、酒店、游泳池、有線網路</p>
+                    </div>
+                </li>
+                <li class="hotelCard">
+                    <div class="hotelCard-img">
+                        <img src="images/ec0d37a0a95d428406795e1fa1dd1aaa.jpg" alt="">
+                    </div>
+                    <div class="hotelCard-content">
+                        <h3 class="hotelCard-name">花蓮翰品酒店</h3>
+                        <p class="hotelCard-info">花蓮縣・花蓮市</p>
+                        <p class="hotelCard-info">9009~44814</p>
+                        <p class="hotelCard-info">有停車位</p>
+                        <p class="hotelCard-service">服務：餐廳、會議場所、咖啡廳、酒吧、宴會廳、健身房、酒店、游泳池、有線網路</p>
+                    </div>
+                </li>
+                <li class="hotelCard">
+                    <div class="hotelCard-img">
+                        <img src="images/ec0d37a0a95d428406795e1fa1dd1aaa.jpg" alt="">
+                    </div>
+                    <div class="hotelCard-content">
+                        <h3 class="hotelCard-name">花蓮翰品酒店</h3>
+                        <p class="hotelCard-info">花蓮縣・花蓮市</p>
+                        <p class="hotelCard-info">9009~44814</p>
+                        <p class="hotelCard-info">有停車位</p>
+                        <p class="hotelCard-service">服務：餐廳、會議場所、咖啡廳、酒吧、宴會廳、健身房、酒店、游泳池、有線網路</p>
+                    </div>
+                </li>
+                <li class="hotelCard">
+                    <div class="hotelCard-img">
+                        <img src="images/ec0d37a0a95d428406795e1fa1dd1aaa.jpg" alt="">
+                    </div>
+                    <div class="hotelCard-content">
+                        <h3 class="hotelCard-name">花蓮翰品酒店</h3>
+                        <p class="hotelCard-info">花蓮縣・花蓮市</p>
+                        <p class="hotelCard-info">9009~44814</p>
+                        <p class="hotelCard-info">有停車位</p>
+                        <p class="hotelCard-service">服務：餐廳、會議場所、咖啡廳、酒吧、宴會廳、健身房、酒店、游泳池、有線網路</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="searchResult-pages"></div>
+        </div>
+
+    </div>
 </body>
 
 </html>
